@@ -1,0 +1,5 @@
+com\todoapp\dao\TaskDAO.class
+com\todoapp\util\JPAUtil.class
+com\todoapp\model\Task.class
+com\todoapp\servlet\DeleteTaskServlet.class
+com\todoapp\servlet\TaskServlet.class
