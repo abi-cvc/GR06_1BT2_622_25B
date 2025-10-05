@@ -19,25 +19,6 @@ JSTL - Java Standard Tag Library
 ✅ Persistencia con JPA/Hibernate
 ✅ Base de datos H2 en memoria
 
-📂 Estructura del Proyecto
-todo-app/
-├── src/
-│   └── main/
-│       ├── java/
-│       │   └── com/todoapp/
-│       │       ├── model/Task.java          (Entidad JPA)
-│       │       ├── dao/TaskDAO.java         (Acceso a datos)
-│       │       ├── servlet/
-│       │       │   ├── TaskServlet.java     (Controlador principal)
-│       │       │   └── DeleteTaskServlet.java
-│       │       └── util/JPAUtil.java        (Configuración JPA)
-│       ├── resources/
-│       │   └── META-INF/persistence.xml     (Configuración ORM)
-│       └── webapp/
-│           ├── WEB-INF/web.xml
-│           ├── index.jsp                    (Página de inicio)
-│           └── tasks.jsp                    (Lista de tareas)
-└── pom.xml
 🚀 Cómo Ejecutar
 Requisitos Previos
 
@@ -45,25 +26,6 @@ Java JDK 11 o superior
 Maven 3.6 o superior
 Apache Tomcat 9 o superior
 
-Pasos de Instalación
-
-Clonar el repositorio:
-
-bashgit clone https://github.com/tu-usuario/todo-app.git
-cd todo-app
-
-Compilar el proyecto:
-
-bashmvn clean package
-
-Desplegar en Tomcat:
-
-Copiar el archivo target/todo-app-1.0-SNAPSHOT.war a la carpeta webapps de Tomcat
-O usar el plugin de Maven:
-
-
-
-bashmvn tomcat7:deploy
 
 Acceder a la aplicación:
 
@@ -95,28 +57,16 @@ No requiere instalación adicional
 Los datos se pierden al reiniciar la aplicación
 Ideal para desarrollo y demostraciones
 
-Cambiar a una base de datos persistente
-Para usar MySQL u otra base de datos, modificar persistence.xml:
-xml<!-- MySQL -->
-<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
-<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/tododb"/>
-<property name="javax.persistence.jdbc.user" value="root"/>
-<property name="javax.persistence.jdbc.password" value="password"/>
-<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
-Y agregar la dependencia en pom.xml:
-xml<dependency>
-    <groupId>mysql</groupId>
-    <artifactId>mysql-connector-java</artifactId>
-    <version>8.0.33</version>
-</dependency>
 📸 Capturas de Pantalla
 Página de Inicio
-Página de bienvenida con botón para acceder a las tareas.
-Lista de Tareas
+<img width="883" height="496" alt="image" src="https://github.com/user-attachments/assets/67c354d7-968d-4441-8198-425b816a88d7" />
 
-Formulario para agregar nuevas tareas
-Lista de tareas con opciones para completar y eliminar
-Tareas completadas se muestran tachadas
+Página de bienvenida con botón para acceder a las tareas.
+<img width="883" height="496" alt="image" src="https://github.com/user-attachments/assets/48bf412d-d8b6-4c26-967b-1eafa85fa2bd" />
+
+Lista de Tareas
+<img width="921" height="517" alt="image" src="https://github.com/user-attachments/assets/96ab9383-a218-46ae-a168-886ebf6fb290" />
+
 
 🔍 Flujo de la Aplicación
 
@@ -161,7 +111,3 @@ Este proyecto demuestra:
 La base de datos H2 se crea automáticamente al iniciar la aplicación
 hibernate.hbm2ddl.auto=update crea/actualiza las tablas automáticamente
 Los logs SQL se muestran en consola (hibernate.show_sql=true)
-
-📄 Licencia
-Este proyecto es de código abierto y está disponible para fines educativos.
-👨‍💻 Autor
